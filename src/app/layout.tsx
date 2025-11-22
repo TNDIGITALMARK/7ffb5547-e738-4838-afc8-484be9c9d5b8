@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Creative Visions - Professional Photography & Visual Storytelling",
+  description: "Fifteen-year industry veteran specializing in creative solutions for modern businesses. From corporate portraits to artistic photography.",
 };
 
 export default function RootLayout({

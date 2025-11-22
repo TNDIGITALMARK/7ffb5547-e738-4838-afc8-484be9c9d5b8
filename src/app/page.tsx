@@ -1,37 +1,41 @@
-export const dynamic = 'force-dynamic'
+import Header from '@/components/portfolio/Header';
+import Hero from '@/components/portfolio/Hero';
+import Gallery from '@/components/portfolio/Gallery';
+import Testimonials from '@/components/portfolio/Testimonials';
+import Footer from '@/components/portfolio/Footer';
+
+export const dynamic = 'force-dynamic';
 
 export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center max-w-2xl px-4">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your App</h1>
-        <p className="text-xl mb-6 text-gray-600">
-          This template is configured to be absolutely lenient - builds never fail on validation errors.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-left">
-          <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-            <h3 className="font-semibold text-green-800 mb-2">✅ Always Builds</h3>
-            <ul className="text-green-700 space-y-1">
-              <li>• TypeScript errors ignored</li>
-              <li>• ESLint warnings ignored</li>
-              <li>• Global error boundaries</li>
-              <li>• Asset type safety</li>
-            </ul>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <Gallery />
+
+        {/* About Section */}
+        <section id="about" className="py-16 px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl shadow-md p-10 lg:p-16">
+              <h2 className="text-3xl font-semibold mb-6 text-center">About</h2>
+              <div className="max-w-3xl mx-auto text-center">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  As a fifteen-year industry veteran, I specialize in creative solutions for modern businesses.
+                  My passion lies in capturing authentic moments and transforming them into timeless visual stories.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  From corporate portraits to artistic photography, I bring a unique blend of technical expertise
+                  and creative vision to every project. Let&apos;s create something extraordinary together.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <h3 className="font-semibold text-blue-800 mb-2">🚀 Production Ready</h3>
-            <ul className="text-blue-700 space-y-1">
-              <li>• Next.js 15.5.2 App Router</li>
-              <li>• Vercel optimized</li>
-              <li>• SSR/SEO friendly</li>
-              <li>• Browser API protection</li>
-            </ul>
-          </div>
-        </div>
-        <p className="mt-6 text-gray-500">
-          Start building your amazing project here! This template will never fail builds due to validation errors.
-        </p>
-      </div>
+        </section>
+
+        <Testimonials />
+      </main>
+      <Footer />
     </div>
   );
 }
